@@ -1,11 +1,35 @@
 import React from 'react';
+import { INCREMENT, DECREMENT, RESET } from '../actions/actionTypes'
 
-const CounterReducer = () => {
-    return (
-        <div>
+const initValue = {
+    count: 100
+}
 
-        </div>
-    );
+
+
+const counterReducer = (state = initValue, action) => {
+    switch (action.type) {
+        case INCREMENT:
+            return {
+                ...state,
+                count: state.count + action.payload
+            };
+
+        case DECREMENT:
+            return {
+                ...state,
+                count: state.count - action.payload
+            };
+        case RESET:
+            return {
+                ...state,
+                count: action.payload
+            }
+        default:
+            return {
+                ...state
+            }
+    }
 };
 
-export default CounterReducer;
+export default counterReducer;
