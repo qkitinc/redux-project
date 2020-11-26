@@ -1,9 +1,10 @@
 import React from 'react';
+import RootView from './view'
 
 const Counter = () => {
     return (
         <div>
-            <h1>Counter</h1>
+            <RootView />
         </div>
     );
 };
