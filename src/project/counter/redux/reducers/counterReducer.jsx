@@ -1,4 +1,3 @@
-import React from 'react';
 import { INCREMENT, DECREMENT, RESET } from '../actions/actionTypes'
 
 const initValue = {
